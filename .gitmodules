@@ -73,3 +73,81 @@
 [submodule "vim-airline-clock"]
 	path = vim-airline-clock
 	url = https://github.com/enricobacis/vim-airline-clock
+[submodule "limelight.vim"]
+	path = limelight.vim
+	url = https://github.com/junegunn/limelight.vim
+[submodule "ZFVimIM"]
+	path = ZFVimIM
+	url = https://github.com/ZSaberLv0/ZFVimIM
+[submodule "tagbar"]
+	path = tagbar
+	url = https://github.com/preservim/tagbar
+[submodule "nerdcommenter"]
+	path = nerdcommenter
+	url = https://github.com/preservim/nerdcommenter
+[submodule "asyncomplete.vim"]
+	path = asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim
+[submodule "ultisnips"]
+	path = ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "asyncomplete-buffer.vim"]
+	path = asyncomplete-buffer.vim
+	url = https://github.com/prabirshrestha/asyncomplete-buffer.vim
+[submodule "asyncomplete-emmet.vim"]
+	path = asyncomplete-emmet.vim
+	url = https://github.com/prabirshrestha/asyncomplete-emmet.vim
+[submodule "emmet-vim"]
+	path = emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "asyncomplete-file.vim"]
+	path = asyncomplete-file.vim
+	url = https://github.com/prabirshrestha/asyncomplete-file.vim
+[submodule "asyncomplete-ultisnips.vim"]
+	path = asyncomplete-ultisnips.vim
+	url = https://github.com/prabirshrestha/asyncomplete-ultisnips.vim
+[submodule "auto-pairs"]
+	path = auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "splitjoin.vim"]
+	path = splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule "nerdtree"]
+	path = nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "vim-markdown"]
+	path = vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule "hiPairs"]
+	path = hiPairs
+	url = https://github.com/Yggdroot/hiPairs
+[submodule "indentLine"]
+	path = indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule "vim-which-key"]
+	path = vim-which-key
+	url = https://github.com/liuchengxu/vim-which-key
+[submodule "vim-easymotion"]
+	path = vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule "vim-easymotion-chs"]
+	path = vim-easymotion-chs
+	url = https://github.com/ZSaberLv0/vim-easymotion-chs
+[submodule "vim-polyglot"]
+	path = vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "traces.vim"]
+	path = traces.vim
+	url = https://github.com/markonm/traces.vim
+[submodule "undotree"]
+	path = undotree
+	url = https://github.com/mbbill/undotree
+[submodule "vim-easy-align"]
+	path = vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
+[submodule "vim-surround"]
+	path = vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "colorizer"]
+	path = colorizer
+	url = https://github.com/lilydjwg/colorizer
