@@ -22,9 +22,6 @@
 [submodule "vim-sneak"]
 	path = vim-sneak
 	url = https://github.com/justinmk/vim-sneak
-[submodule "vim-pencil"]
-	path = vim-pencil
-	url = https://github.com/reedes/vim-pencil
 [submodule "vim-textobj-sentence"]
 	path = vim-textobj-sentence
 	url = https://github.com/reedes/vim-textobj-sentence
@@ -67,3 +64,12 @@
 [submodule "vim-rooter"]
 	path = vim-rooter
 	url = https://github.com/airblade/vim-rooter
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim-airline-themes"]
+	path = vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim-airline-clock"]
+	path = vim-airline-clock
+	url = https://github.com/enricobacis/vim-airline-clock
