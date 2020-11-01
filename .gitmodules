@@ -202,6 +202,6 @@
 [submodule "vim-yaml"]
 	path = vim-yaml
 	url = https://github.com/stephpy/vim-yaml
-[submodule "vim-hexokinase"]
-	path = vim-hexokinase
-	url = https://github.com/RRethy/vim-hexokinase
+[submodule "Colorizer"]
+	path = Colorizer
+	url = https://github.com/chrisbra/Colorizer
