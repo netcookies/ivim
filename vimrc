@@ -1077,6 +1077,7 @@
                 let g:airline_left_sep='›'  " Slightly fancier than '>'
                 let g:airline_right_sep='‹' " Slightly fancier than '<'
             endif
+            let g:airline#extensions#tabline#enabled = 1
         "endif
     " }
 

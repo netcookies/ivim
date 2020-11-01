@@ -148,9 +148,6 @@
 [submodule "conflict-marker.vim"]
 	path = conflict-marker.vim
 	url = https://github.com/rhysd/conflict-marker.vim
-[submodule "vim-bufferline"]
-	path = vim-bufferline
-	url = https://github.com/bling/vim-bufferline
 [submodule "vim-nerdtree-tabs"]
 	path = vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs
