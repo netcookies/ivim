@@ -10,18 +10,6 @@
 [submodule "vim-wordy"]
 	path = vim-wordy
 	url = https://github.com/reedes/vim-wordy
-[submodule "vim-commentary"]
-	path = vim-commentary
-	url = https://github.com/tpope/vim-commentary
-[submodule "vim-dirvish"]
-	path = vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish
-[submodule "vim-peekaboo"]
-	path = vim-peekaboo
-	url = https://github.com/junegunn/vim-peekaboo
-[submodule "vim-sneak"]
-	path = vim-sneak
-	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-textobj-sentence"]
 	path = vim-textobj-sentence
 	url = https://github.com/reedes/vim-textobj-sentence
@@ -43,9 +31,6 @@
 [submodule "vim-abolish"]
 	path = vim-abolish
 	url = https://github.com/tpope/vim-abolish
-[submodule "vim-correction"]
-	path = vim-correction
-	url = https://github.com/jdelkins/vim-correction
 [submodule "tex-conceal.vim"]
 	path = tex-conceal.vim
 	url = https://github.com/KeitaNakamura/tex-conceal.vim
@@ -151,12 +136,6 @@
 [submodule "PIV"]
 	path = PIV
 	url = https://github.com/spf13/PIV
-[submodule "vim-php-namespace"]
-	path = vim-php-namespace
-	url = https://github.com/arnaud-lb/vim-php-namespace
-[submodule "vim-twig"]
-	path = vim-twig
-	url = https://github.com/beyondwords/vim-twig
 [submodule "sessionman.vim"]
 	path = sessionman.vim
 	url = https://github.com/vim-scripts/sessionman.vim
@@ -181,9 +160,6 @@
 [submodule "vim-signify"]
 	path = vim-signify
 	url = https://github.com/mhinz/vim-signify
-[submodule "vim-over"]
-	path = vim-over
-	url = https://github.com/osyo-manga/vim-over
 [submodule "wildfire.vim"]
 	path = wildfire.vim
 	url = https://github.com/gcmt/wildfire.vim

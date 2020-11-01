@@ -627,11 +627,11 @@
 
     " Session List {
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-        if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
+        "if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
             nmap <leader>sl :SessionList<CR>
             nmap <leader>ss :SessionSave<CR>
             nmap <leader>sc :SessionClose<CR>
-        endif
+        "endif
     " }
 
     " JSON {
@@ -684,6 +684,8 @@
                 \ },
                 \ 'fallback': s:ctrlp_fallback
             \ }
+
+            call ctrlp_bdelete#init()
 
             "if isdirectory(expand("~/.vim/bundle/ctrlp-funky/"))
                 " CtrlP extensions
@@ -997,39 +999,39 @@
     " }
 
     " Snippets {
-        if count(g:spf13_bundle_groups, 'neocomplcache') ||
-                    \ count(g:spf13_bundle_groups, 'neocomplete')
+        "if count(g:spf13_bundle_groups, 'neocomplcache') ||
+                    "\ count(g:spf13_bundle_groups, 'neocomplete')
 
-            " Use honza's snippets.
-            let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+            "" Use honza's snippets.
+            "let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
-            " Enable neosnippet snipmate compatibility mode
-            let g:neosnippet#enable_snipmate_compatibility = 1
+            "" Enable neosnippet snipmate compatibility mode
+            "let g:neosnippet#enable_snipmate_compatibility = 1
 
-            " For snippet_complete marker.
-            if !exists("g:spf13_no_conceal")
-                if has('conceal')
-                    set conceallevel=2 concealcursor=i
-                endif
-            endif
+            "" For snippet_complete marker.
+            "if !exists("g:spf13_no_conceal")
+                "if has('conceal')
+                    "set conceallevel=2 concealcursor=i
+                "endif
+            "endif
 
-            " Enable neosnippets when using go
-            let g:go_snippet_engine = "neosnippet"
+            "" Enable neosnippets when using go
+            "let g:go_snippet_engine = "neosnippet"
 
-            " Disable the neosnippet preview candidate window
-            " When enabled, there can be too much visual noise
-            " especially when splits are used.
-            set completeopt-=preview
-        endif
+            "" Disable the neosnippet preview candidate window
+            "" When enabled, there can be too much visual noise
+            "" especially when splits are used.
+            "set completeopt-=preview
+        "endif
     " }
 
     " FIXME: Isn't this for Syntastic to handle?
     " Haskell post write lint and check with ghcmod
     " $ `cabal install ghcmod` if missing and ensure
     " ~/.cabal/bin is in your $PATH.
-    if !executable("ghcmod")
-        autocmd BufWritePost *.hs GhcModCheckAndLintAsync
-    endif
+    "if !executable("ghcmod")
+        "autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+    "endif
 
     " UndoTree {
         "if isdirectory(expand("~/.vim/bundle/undotree/"))
@@ -1203,48 +1205,48 @@
     " e.g. Grep current file for <search_term>: Shell grep -Hn <search_term> %
     " }
 
-    function! s:IsSpf13Fork()
-        let s:is_fork = 0
-        let s:fork_files = ["~/.vimrc.fork", "~/.vimrc.before.fork", "~/.vimrc.bundles.fork"]
-        for fork_file in s:fork_files
-            if filereadable(expand(fork_file, ":p"))
-                let s:is_fork = 1
-                break
-            endif
-        endfor
-        return s:is_fork
-    endfunction
+    "function! s:IsSpf13Fork()
+        "let s:is_fork = 0
+        "let s:fork_files = ["~/.vimrc.fork", "~/.vimrc.before.fork", "~/.vimrc.bundles.fork"]
+        "for fork_file in s:fork_files
+            "if filereadable(expand(fork_file, ":p"))
+                "let s:is_fork = 1
+                "break
+            "endif
+        "endfor
+        "return s:is_fork
+    "endfunction
      
-    function! s:ExpandFilenameAndExecute(command, file)
-        execute a:command . " " . expand(a:file, ":p")
-    endfunction
+    "function! s:ExpandFilenameAndExecute(command, file)
+        "execute a:command . " " . expand(a:file, ":p")
+    "endfunction
      
-    function! s:EditSpf13Config()
-        call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
-        call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
-        call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
+    "function! s:EditSpf13Config()
+        "call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
+        "call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
+        "call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
      
-        execute bufwinnr(".vimrc") . "wincmd w"
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
-        wincmd l
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
-        wincmd l
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
+        "execute bufwinnr(".vimrc") . "wincmd w"
+        "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
+        "wincmd l
+        "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
+        "wincmd l
+        "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
      
-        if <SID>IsSpf13Fork()
-            execute bufwinnr(".vimrc") . "wincmd w"
-            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
-            wincmd l
-            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.fork")
-            wincmd l
-            call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
-        endif
+        "if <SID>IsSpf13Fork()
+            "execute bufwinnr(".vimrc") . "wincmd w"
+            "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
+            "wincmd l
+            "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.fork")
+            "wincmd l
+            "call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
+        "endif
      
-        execute bufwinnr(".vimrc.local") . "wincmd w"
-    endfunction
+        "execute bufwinnr(".vimrc.local") . "wincmd w"
+    "endfunction
      
-    execute "noremap " . s:spf13_edit_config_mapping " :call <SID>EditSpf13Config()<CR>"
-    execute "noremap " . s:spf13_apply_config_mapping . " :source ~/.vimrc<CR>"
+    "execute "noremap " . s:spf13_edit_config_mapping " :call <SID>EditSpf13Config()<CR>"
+    "execute "noremap " . s:spf13_apply_config_mapping . " :source ~/.vimrc<CR>"
 " }
 
 " Custom colorscheme config {
@@ -1396,8 +1398,44 @@ command! -nargs=0 Prose call Prose()
 " Goyo
 let g:goyo_width = 80
 let g:goyo_height = "100%"
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 nnoremap <c-8> :Goyo<cr>
 nnoremap <c-1> :call SynGroup()<cr>
+
+" vim-easymotion {
+    " <Leader>f{char} to move to {char}
+    map  <Leader>f <Plug>(easymotion-bd-f)
+    nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+    " s{char}{char} to move to {char}{char}
+    nmap s <Plug>(easymotion-overwin-f2)
+
+    " Move to line
+    map <Leader>L <Plug>(easymotion-bd-jk)
+    nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+    " Move to word
+    map  <Leader>w <Plug>(easymotion-bd-w)
+    nmap <Leader>w <Plug>(easymotion-overwin-w)
+" }
+
+" vim-lexical {
+    augroup lexical
+      autocmd!
+      autocmd FileType markdown,mkd call lexical#init()
+      autocmd FileType textile call lexical#init()
+      autocmd FileType text call lexical#init({ 'spell': 0 })
+    augroup END
+" }
+
+" vim-litecorrect {
+    augroup litecorrect
+      autocmd!
+      autocmd FileType markdown,mkd call litecorrect#init()
+      autocmd FileType textile call litecorrect#init()
+    augroup END
+" }
 
 " Custom keybindings {
 :nnoremap <leader>ts :w !pbcopy<CR><CR>
