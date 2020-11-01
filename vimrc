@@ -770,6 +770,11 @@
             let g:airline#extensions#tabline#enabled = 1
         "endif
     " }
+
+    " vim-which-key {
+        nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
+        nnoremap <silent> <localleader> :<c-u>WhichKey '_'<CR>
+    " }
 " }
 
 " GUI Settings {
