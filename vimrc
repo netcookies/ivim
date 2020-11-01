@@ -31,6 +31,66 @@ set path+=**
 set fillchars+=vert:\│
 set synmaxcol=5000
 
+" Copy from spf
+scriptencoding utf-8
+
+
+    " Most prefer to automatically switch to the current file directory when
+    " a new buffer is opened; to prevent this behavior, add the following to
+    " your .vimrc.before.local file:
+    "   let g:spf13_no_autochdir = 1
+    if !exists('g:spf13_no_autochdir')
+        autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+        " Always switch to the current file directory
+    endif
+
+    "set autowrite                       " Automatically write a file when leaving a modified buffer
+    set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
+    set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
+    set virtualedit=onemore             " Allow for cursor beyond last character
+    set history=1000                    " Store a ton of history (default is 20)
+    set spell                           " Spell checking on
+    set hidden                          " Allow buffer switching without saving
+    set iskeyword-=.                    " '.' is an end of word designator
+    set iskeyword-=#                    " '#' is an end of word designator
+    set iskeyword-=-                    " '-' is an end of word designator
+
+    " Instead of reverting the cursor to the last position in the buffer, we
+    " set it to the first line when editing a git commit message
+    au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
+    " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
+    " Restore cursor to file position in previous editing session
+    " To disable this, add the following to your .vimrc.before.local file:
+    "   let g:spf13_no_restore_cursor = 1
+    if !exists('g:spf13_no_restore_cursor')
+        function! ResCur()
+            if line("'\"") <= line("$")
+                silent! normal! g`"
+                return 1
+            endif
+        endfunction
+
+        augroup resCur
+            autocmd!
+            autocmd BufWinEnter * call ResCur()
+        augroup END
+    endif
+
+        if has('persistent_undo')
+            set undofile                " So is persistent undo ...
+            set undolevels=1000         " Maximum number of changes that can be undone
+            set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+        endif
+
+    set tabpagemax=15               " Only show 15 tabs
+    set showmode                    " Display the current mode
+
+    set cursorline                  " Highlight current line
+
+    highlight clear SignColumn      " SignColumn should match background
+    highlight clear LineNr          " Current line number row will have same background color in relative mode
+
 " set exrc
 " set secure
 
@@ -42,7 +102,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undodir=~/backups
-set undofile
+"set undofile
 
 " Some of my favourites
 " colorscheme PaperColor
