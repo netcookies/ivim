@@ -205,3 +205,12 @@
 [submodule "Colorizer"]
 	path = Colorizer
 	url = https://github.com/chrisbra/Colorizer
+[submodule "HTML-AutoCloseTag"]
+	path = HTML-AutoCloseTag
+	url = https://github.com/vim-scripts/HTML-AutoCloseTag
+[submodule "vim-endwise"]
+	path = vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule "vim-xtract"]
+	path = vim-xtract
+	url = https://github.com/rstacruz/vim-xtract
