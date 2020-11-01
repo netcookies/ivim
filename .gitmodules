@@ -76,9 +76,6 @@
 [submodule "limelight.vim"]
 	path = limelight.vim
 	url = https://github.com/junegunn/limelight.vim
-[submodule "ZFVimIM"]
-	path = ZFVimIM
-	url = https://github.com/ZSaberLv0/ZFVimIM
 [submodule "tagbar"]
 	path = tagbar
 	url = https://github.com/preservim/tagbar
