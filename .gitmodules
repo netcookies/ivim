@@ -181,3 +181,6 @@
 [submodule "vim-xtract"]
 	path = vim-xtract
 	url = https://github.com/rstacruz/vim-xtract
+[submodule "vim-endwise"]
+	path = vim-endwise
+	url = https://github.com/tpope/vim-endwise
