@@ -190,7 +190,7 @@
         "color solarized             " Load a colorscheme
     "endif
     colorscheme seoul256
-    ifont iosevka-fixed-ss04-extended 18
+    ifont iosevka-fixed-ss04-extended 22
 
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
